@@ -1,5 +1,5 @@
 
-import { Detection } from "@/lib/types";
+import { Detection } from "../lib/types";
 
 export default function Timeline({ items }: { items: Detection[] }) {
   return (

@@ -119,7 +119,7 @@ export default function VisualizationAgent({ detections, isActive, onToggle }: V
         summary: `Peak detection activity at ${hourlyData.reduce((a, b) => a.count > b.count ? a : b).hour}`,
         keyInsights: [
           `Peak activity at ${hourlyData.reduce((a, b) => a.count > b.count ? a : b).hour}`,
-          `${hourlyData.reduce((a, b) => a.count + b.count, 0)} total detections across all hours`,
+          `${hourlyData.reduce((sum, item) => sum + item.count, 0)} total detections across all hours`,
           `Activity pattern shows ${hourlyData.length > 0 ? 'consistent' : 'sporadic'} surveillance coverage`
         ]
       }
@@ -178,8 +178,8 @@ export default function VisualizationAgent({ detections, isActive, onToggle }: V
         altText: `Scatter plot showing ${scatterData.length} data points for confidence vs severity analysis`,
         summary: `Correlation coefficient: ${scatterData[0]?.correlation || 0} between confidence and severity`,
         keyInsights: [
-          `High confidence (${scatterData.filter(d => d.confidence > 80).length}) detections tend to be ${scatterData.filter(d => d.confidence > 80 && d.severity === 'critical').length > 0 ? 'critical' : 'high severity'}`,
-          `Low confidence (${scatterData.filter(d => d.confidence < 60).length}) detections are mostly ${scatterData.filter(d => d.confidence < 60 && d.severity === 'low').length > 0 ? 'low severity' : 'medium severity'}`,
+          `High confidence (${scatterData.filter(d => d.confidence > 80).length}) detections tend to be ${scatterData.filter(d => d.confidence > 80 && d.severity === 4).length > 0 ? 'critical' : 'high severity'}`,
+          `Low confidence (${scatterData.filter(d => d.confidence < 60).length}) detections are mostly ${scatterData.filter(d => d.confidence < 60 && d.severity === 1).length > 0 ? 'low severity' : 'medium severity'}`,
           `Data shows ${scatterData[0]?.correlation > 0.5 ? 'strong' : 'weak'} correlation between confidence and severity`
         ]
       }
@@ -329,7 +329,7 @@ export default function VisualizationAgent({ detections, isActive, onToggle }: V
     
     const correlation = n === 0 ? 0 : (n * sumXY - sumX * sumY) / Math.sqrt((n * sumX2 - sumX * sumX) * (n * sumY2 - sumY * sumY));
     
-    return [{ ...scatterData[0], correlation: Math.round(correlation * 100) / 100 }, ...scatterData.slice(1)];
+    return scatterData.map(item => ({ ...item, correlation: Math.round(correlation * 100) / 100 }));
   };
 
   const generateTemporalPatterns = (dets: Detection[]) => {

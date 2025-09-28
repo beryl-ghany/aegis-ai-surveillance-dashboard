@@ -1,5 +1,5 @@
 
-import { Detection } from "@/lib/types";
+import { Detection } from "../lib/types";
 import TruthMeter from "./TruthMeter";
 
 export default function DetectionsGrid({ items }: { items: Detection[] }){
