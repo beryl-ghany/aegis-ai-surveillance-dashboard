@@ -86,7 +86,11 @@ npm run dev
 
 ## 📱 **Screenshots**
 
-*Add screenshots of your dashboard here*
+*Demo Snips*
+<img width="1756" height="947" alt="image" src="https://github.com/user-attachments/assets/e7cf48d5-b4fc-4fa6-9f0a-c12a2e78972f" />
+<img width="1497" height="828" alt="image" src="https://github.com/user-attachments/assets/fae681a4-fade-4be8-9ecc-36153ee8e9d7" />
+
+
 
 ## 🚀 **Deployment**
 http://aegis-ai.us/
