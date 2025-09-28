@@ -1,13 +1,13 @@
 # 🚀 Aegis AI - Surveillance Dashboard
 
-> **MLH Hackathon Submission** | **Best Auto Visualization Agent** | **Best Use of Gemini API**
+> **MLH Hackathon Submission** 
 
 Aegis AI is a professional AI-powered surveillance dashboard that automatically analyzes security threats and visualizes data in real-time using advanced machine learning and Google Gemini AI.
 
 ## 🏆 **Hackathon Categories**
 
-- **Best Auto Visualization Agent**: Advanced AI-driven chart selection with comprehensive justifications
-- **Best Use of Gemini API**: Integrated Google Gemini AI for threat analysis, report generation, and prediction
+- **Auto Visualization Agent**: Advanced AI-driven chart selection with comprehensive justifications
+- **Use of Gemini API**: Integrated Google Gemini AI for threat analysis, report generation, and prediction
 
 ## ✨ **Key Features**
 
@@ -89,10 +89,9 @@ npm run dev
 *Add screenshots of your dashboard here*
 
 ## 🚀 **Deployment**
+http://aegis-ai.us/
 
-Ready for deployment on Vercel, Netlify, or any Next.js hosting platform.
 
-## 👥 **Team**
 
 Built for MLH Hackathon - Aegis AI Surveillance Dashboard
 
@@ -101,5 +100,3 @@ Built for MLH Hackathon - Aegis AI Surveillance Dashboard
 MIT License - Feel free to use for educational purposes
 
 ---
-
-**Ready to win first place! 🏆**
