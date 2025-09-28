@@ -1,0 +1,39 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for enhanced components */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+/* Focus ring utility */
+.focus-ring:focus {
+  outline: 2px solid #00d4aa;
+  outline-offset: 2px;
+}
+
+/* Custom marker styles */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+:root { color-scheme: dark; }
+html, body { height: 100%; background: #0B0F14; color: #E5E7EB; }
+.focus-ring:focus-visible { outline: 2px solid #1E90FF; outline-offset: 2px; }
+/* Leaflet dark fix */
+.leaflet-container { background: #0B0F14; }
